@@ -1,0 +1,24 @@
+pipeline {
+  agent any
+    
+  tools {nodejs "node"}
+    
+  stages {
+            
+    stage('Build') {
+      steps {
+        bat 'npm install'
+
+      }
+    }  
+
+    stage('Deliver') {
+      steps {
+        bat 'START npm start'
+        input message: 'Finished using the Battleship Server? (Click "Proceed" to continue)'
+      }
+  }
+
+           
+  }
+}
