@@ -48,3 +48,6 @@ app.use('/api/chatapp', image);
 server.listen(5000, ()=> {
     console.log('Server Running On Port: 5000');
 })
+
+
+module.exports =app;
