@@ -21,8 +21,8 @@ describe("Incorrect Password login test",function (){
             username:"dhaluksha",
             password:"wrong"
         }).end((err,res) =>{
-            expect(200);
-             //expect(res.body.message).to.equal('Password is incorrect');
+            
+            expect(res.body.message).to.equal('Password is incorrect');
 
         })
     })
